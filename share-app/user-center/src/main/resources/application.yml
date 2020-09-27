@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: user-center
+  datasource:
+    url: jdbc:mysql://123.57.200.135:3306/content-center
+    hikari:
+      username: root
+      password: zl.123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        metadata:
+          instance: cc
+#        server-addr: 123.57.200.135:8848
+server:
+  port: 8082

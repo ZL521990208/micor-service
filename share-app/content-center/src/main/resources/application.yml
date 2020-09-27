@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: content-center
+  datasource:
+    url: jdbc:mysql://123.57.200.135:3306/content-center
+    hikari:
+      username: root
+      password: zl.123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#        server-addr: 123.57.200.135:8848
+server:
+  port: 8084
+
+
+#  提升首次加载速度
+ribbon:
+  eager-load:
+    enabled: true
+    clients: user-center
+
+#  负载均衡机制为随机
+user-center:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

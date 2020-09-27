@@ -1,4 +1,4 @@
-package com.soft1851.springcloud.study.usercenter;
+package com.soft1851.springcloud.study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
